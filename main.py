@@ -2,7 +2,9 @@ import os
 from openai import OpenAI
 
 # 1. Initialize the client (Reads OPENAI_API_KEY from environment variables)
-client = OpenAI()
+client = OpenAI(
+    api_key=os.environ.get("OPENAI_API_KEY")
+)
 
 def run_chat_agent():
     print("🤖 Chat Agent Initialized! Type 'exit' or 'quit' to end the session.\n")
