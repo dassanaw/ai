@@ -1,6 +1,13 @@
 import os
 from openai import OpenAI
 
+# 1. Fetch environment variables defined for the Agent from Agent Manager Deployment Configuration
+openai_key = os.environ.get("OPENAI_API_KEY", "default key")
+
+# 2. Show deployment variables
+print(f" variable set : Key: {openai_key} )")
+
+
 # Initialize the client. 
 # It automatically picks up the 'OPENAI_API_KEY' environment variable.
 client = OpenAI(
