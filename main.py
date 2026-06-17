@@ -5,7 +5,7 @@ from openai import OpenAI
 openai_key = os.environ.get("OPENAI_API_KEY", "default key")
 
 # 2. Show deployment variables
-print(f" variable set : Key: {openai_key}")
+print(f" variable set : OpenAI Key : {openai_key}")
 
 
 # Initialize the client. 
